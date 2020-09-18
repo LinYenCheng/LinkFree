@@ -49,23 +49,30 @@
         class="link"
         href="https://linyencheng.github.io/"
         target="_blank"
-        style="border-radius: 8px;"
-        ><i class="fa fa-rss" aria-hidden="true"></i>
-        <span>前端三分鐘</span></a
+        style="border-radius: 8px"
+        ><i class="fa fa-rss" aria-hidden="true"></i> <span>前端三分鐘</span></a
       >
       <a
         class="link"
         href="https://linyencheng.github.io/2019/07/13/tool-nginx/"
         target="_blank"
-        style="border-radius: 8px;"
+        style="border-radius: 8px"
         ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
         <span>Nginx 設定與效能優化教學</span></a
       >
       <a
         class="link"
+        href="https://linyencheng.github.io/categories/#Elastic%20Cloud/"
+        target="_blank"
+        style="border-radius: 8px"
+        ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
+        <span>30 天入門 Elastic Cloud</span></a
+      >
+      <a
+        class="link"
         href="https://linyencheng.github.io/2020/06/08/thinking-conversational-commerce/"
         target="_blank"
-        style="border-radius: 8px;"
+        style="border-radius: 8px"
         ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
         <span>Shoplus 東南亞經驗分享</span></a
       >
@@ -73,7 +80,7 @@
         class="link"
         href="https://linyencheng.github.io/2020/08/17/thinking-resume/"
         target="_blank"
-        style="border-radius: 8px;"
+        style="border-radius: 8px"
         ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
         <span>如何寫出驚喜滿滿的履歷</span></a
       >
@@ -81,7 +88,7 @@
         class="link"
         href="https://linyencheng.github.io/about/"
         target="_blank"
-        style="border-radius: 8px;"
+        style="border-radius: 8px"
         ><i class="fa fa-info-circle" aria-hidden="true"></i>
         <span>關於我</span></a
       >
@@ -90,28 +97,28 @@
     <div class="footer">
       <a href="https://www.instagram.com/linyencheng.tw/" target="_blank">
         <i
-          style="line-height: 40px;"
+          style="line-height: 40px"
           class="fa fa-instagram circulo"
           aria-hidden="true"
         ></i>
       </a>
       <a href="https://www.facebook.com/linyencheng.tw" target="_blank">
         <i
-          style="line-height: 40px;"
+          style="line-height: 40px"
           class="fa fa-facebook-f circulo"
           aria-hidden="true"
         ></i>
       </a>
       <a href="https://www.linkedin.com/in/linyencheng/" target="_blank">
         <i
-          style="line-height: 40px;"
+          style="line-height: 40px"
           class="fa fa-linkedin circulo"
           aria-hidden="true"
         ></i>
       </a>
       <a href="https://github.com/LinYenCheng" target="_blank">
         <i
-          style="line-height: 40px;"
+          style="line-height: 40px"
           class="fa fa-github circulo"
           aria-hidden="true"
         ></i>
@@ -138,5 +145,35 @@
       src="https://cdn.embedly.com/widgets/platform.js"
       charset="UTF-8"
     ></script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v8.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="219138595338413"
+      greeting_dialog_display="hide"
+      logged_in_greeting="嗨，你好，這裡是前端三分鐘! 我是彥成，前端工程師。"
+      logged_out_greeting="嗨，你好，這裡是前端三分鐘! 我是彥成，前端工程師。"
+    ></div>
   </body>
 </html>
