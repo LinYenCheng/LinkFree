@@ -96,4 +96,12 @@ if (/Line/.test(navigator.userAgent)) {
   j.async = true;
   j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
   f.parentNode.insertBefore(j, f);
+  
 })(window, document, "script", "dataLayer", "GTM-W5LMXCR");
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    document.getElementById('mode').click();
+  }
+}
+
