@@ -31,7 +31,11 @@
     <script type="text/javascript" src="assets/js/script.js"></script>
   </head>
   <body>
-    <i onclick="mostrar(this)" id="mode" class="fa fa-moon-o fa-2x night_mode"></i>
+    <i
+      onclick="mostrar(this)"
+      id="mode"
+      class="fa fa-moon-o fa-2x night_mode"
+    ></i>
     <img id="userPhoto" src="assets/imagens/me.jpg" alt="User Photo" />
     <spam id="userName">林彥成</spam>
     <div id="links">
@@ -194,7 +198,7 @@
           loadLikeCo();
           loadFB();
         }
-      }, 100);
+      }, 3000);
       // lazyloadCSS
       function lazyloadCSS() {
         const a = document.createElement("link");
