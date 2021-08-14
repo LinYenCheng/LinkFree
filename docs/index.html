@@ -28,13 +28,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/object-fit/0.4.2/polyfill.object-fit.css"
     />
     <link rel="icon" href="assets/imagens/favicon.ico" type="image/x-icon" />
-    <script type="text/javascript" src="assets/js/script.js"></script>
   </head>
   <body>
     <i
       onclick="mostrar(this)"
       id="mode"
-      class="fa fa-moon-o fa-2x night_mode"
+      class="fa fa-sun-o fa-2x night_mode"
     ></i>
     <img id="userPhoto" src="assets/imagens/me.jpg" alt="User Photo" />
     <spam id="userName">林彥成</spam>
@@ -46,6 +45,16 @@
         style="border-radius: 8px"
         ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
         <span style="font-size: 0.9rem">SEO MAU 3000 到 4000+ 的過程</span></a
+      >
+      <a
+        class="link"
+        href="https://linyencheng.github.io/2021/08/12/test-cypress-popcat/?utm_source=link&utm_medium=linkme&utm_campaign=linkme_profile"
+        target="_blank"
+        style="border-radius: 8px"
+        ><i class="fa fa-bookmark-o" aria-hidden="true"></i>
+        <span style="font-size: 0.9rem"
+          >Cypress 超快速入門: 貓貓點擊大賽參戰</span
+        ></a
       >
       <a
         class="link"
@@ -130,79 +139,17 @@
         data-href="https://linyencheng.github.io/<%- path.replace( /(\/index\.html?$)|(\/?$)/, '') %>"
       ></div>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
     <!-- Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/object-fit/0.4.2/polyfill.object-fit.min.js"
     ></script>
-
-    <script>
-      var runningOnBrowser = typeof window !== "undefined";
-      var isBot =
-        (runningOnBrowser && !("onscroll" in window)) ||
-        (typeof navigator !== "undefined" &&
-          /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(
-            navigator.userAgent
-          ));
-      var supportsIntersectionObserver =
-        runningOnBrowser && "IntersectionObserver" in window;
-      function loadLikeCo() {
-        //新增的 loadLikeCo() 函數
-        (function () {
-          var likeCo = document.createElement("script");
-          likeCo.type = "text/javascript";
-          likeCo.defer = true;
-          likeCo.src = "//static.like.co/sdk/v1/button.js";
-          (
-            document.getElementsByTagName("head")[0] ||
-            document.getElementsByTagName("body")[0]
-          ).appendChild(likeCo);
-        })();
-      }
-
-      setTimeout(function () {
-        if (!isBot && supportsIntersectionObserver) {
-          var link_observer = new IntersectionObserver(
-            function (entries) {
-              if (entries[0].isIntersecting) {
-                loadLikeCo();
-                link_observer.disconnect();
-              }
-            },
-            { threshold: [0] }
-          );
-          link_observer.observe(document.getElementById("fb-root"));
-        } else {
-          loadLikeCo();
-        }
-      }, 5000);
-      // lazyloadCSS
-      function lazyloadCSS() {
-        const a = document.createElement("link");
-        a.rel = "stylesheet";
-        a.href =
-          "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
-
-        // const b = document.createElement('link');
-        // b.rel = 'stylesheet';
-        // b.href = 'fonts/basic_latin/mplus_webfonts.css';
-
-        const z = document.getElementsByTagName("head")[0];
-        z.parentNode.insertBefore(a, z);
-        // z.parentNode.insertBefore(b, z);
-      }
-
-      const raf =
-        requestAnimationFrame ||
-        mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame ||
-        msRequestAnimationFrame;
-      if (raf) raf(lazyloadCSS);
-      else window.addEventListener("load", lazyloadCSS);
-      // lazyloadCSS
-    </script>
-
+    <script type="text/javascript" src="assets/js/script.js"></script>
     <!-- Your Chat Plugin code -->
     <div
       class="fb-customerchat"
