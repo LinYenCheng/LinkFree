@@ -103,7 +103,7 @@ setTimeout(() => {
       },
       { threshold: [0] }
     );
-    link_observer.observe(document.getElementById("fb-root"));
+    link_observer.observe(document.getElementById("mode"));
   } else {
     loadLikeCo();
   }
