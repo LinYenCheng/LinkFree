@@ -79,6 +79,7 @@ a span {
 }
 
 .footer a {
+  margin-right: 4px;
   text-decoration: none;
 }
 
