@@ -85,8 +85,9 @@ a span {
 .circulo {
   background: rgb(221, 221, 221);
   border-radius: 52px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   margin-right: 8px;
   text-align: center;
   font-size: 10px;
